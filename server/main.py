@@ -20,8 +20,6 @@ def hello_world():
 def parse():
     content = parsePack('./Desyaty_batalion')
     content = content['package']
-    # with open('test.json', 'w') as out:
-    #     json.dump(content, out, indent=4, ensure_ascii=False)
 
     new_pack = Pack(
         name=content['@name'],
