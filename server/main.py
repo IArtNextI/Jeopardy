@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 from parser import parsePack
 from models import *
 
@@ -10,7 +10,7 @@ db.create_all()
 
 @app.route('/')
 def hello_world():
-    return 'Hello, World!'
+    return render_template('index.html')
 
 
 @app.route('/parse')
